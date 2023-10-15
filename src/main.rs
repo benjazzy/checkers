@@ -1,3 +1,3 @@
 pub fn main() {
-    println!("{}", checkers::get_next_square());
+    println!("{}", checkers::move_gen::get_next_square());
 }
