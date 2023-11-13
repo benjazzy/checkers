@@ -136,6 +136,22 @@ mod tests {
     // }
 
     #[test]
+    fn check_movers_white_four_p1() {
+        // W4-1
+        let board = Bitboards {
+            black: 5,
+            white: 2863311520,
+            kings: 0,
+        };
+
+        println!("W4-1:\n{}", board.format());
+
+        let movers = 2863311520;
+
+        assert_eq!(board.get_movers_white(), movers);
+    }
+
+    #[test]
     fn check_movers_white_starting() {
         let board = Bitboards {
             black: 0,
