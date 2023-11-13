@@ -140,13 +140,29 @@ mod tests {
         // W4-1
         let board = Bitboards {
             black: 5,
-            white: 2863311520,
+            white: 2779096480,
             kings: 0,
         };
 
         println!("W4-1:\n{}", board.format());
 
-        let movers = 2863311520;
+        let movers = 2779096480;
+
+        assert_eq!(board.get_movers_white(), movers);
+    }
+
+    #[test]
+    fn check_movers_white_four_p2() {
+        // W4-1
+        let board = Bitboards {
+            black: 2,
+            white: 1515870800,
+            kings: 0,
+        };
+
+        println!("W4-2:\n{}", board.format());
+
+        let movers = 1515870800;
 
         assert_eq!(board.get_movers_white(), movers);
     }
